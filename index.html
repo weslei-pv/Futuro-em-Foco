@@ -11,36 +11,39 @@
 
     <header class="header">
         <h1 class="header-title">Futuro em Foco</h1>
-        <nav class="header-nav">
-            <ul class="nav-list">
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#profissoes">Profissões</a></li>
-                <li><a href="#planejamento">Meu Plano</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <main class="main-content">
-        <section id="inicio" class="intro-section">
-            <h2>Bem-vindos, 3A!</h2>
-            <p>Este é o nosso espaço para explorar e planejar o futuro. Descubra diversas profissões e comece a traçar o seu caminho profissional.</p>
-        </section>
+    <div class="content-container">
+        <aside class="sidebar-nav">
+            <ul class="nav-list">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#colegas">Nossos Planos</a></li>
+                <li><a href="#planejamento">Meu Plano</a></li>
+            </ul>
+        </aside>
 
-        <section id="profissoes" class="professions-section">
-            <h2>Profissões em Destaque</h2>
-            <div class="professions-grid">
+        <main class="main-content">
+            <section id="inicio" class="intro-section">
+                <h2>Bem-vindos, 3A!</h2>
+                <p>Este é o nosso espaço para explorar e planejar o futuro. Descubra as profissões que seus colegas escolheram e comece a traçar o seu caminho profissional.</p>
+            </section>
+
+            <section id="colegas" class="colleagues-section">
+                <h2>Nossos Planos de Carreira</h2>
+                <div class="colleagues-grid">
+                    </div>
+            </section>
+
+            <section id="planejamento" class="plan-section">
+                <h2>Meu Plano de Carreira</h2>
+                <div class="planning-area">
+                    <textarea id="my-plan-text" placeholder="Escreva aqui sobre a sua profissão dos sonhos, por que você a escolheu, os passos para chegar lá e suas metas."></textarea>
+                    <button id="save-plan-btn">Salvar Meu Plano</button>
+                    <div id="saved-plan-message" class="hidden">Plano salvo com sucesso!</div>
                 </div>
-        </section>
-
-        <section id="planejamento" class="plan-section">
-            <h2>Meu Plano de Carreira</h2>
-            <div class="planning-area">
-                <textarea id="my-plan-text" placeholder="Escreva aqui sobre a sua profissão dos sonhos, por que você a escolheu, os passos para chegar lá e suas metas."></textarea>
-                <button id="save-plan-btn">Salvar Meu Plano</button>
-                <div id="saved-plan-message" class="hidden">Plano salvo com sucesso!</div>
-            </div>
-        </section>
-    </main>
+            </section>
+        </main>
+    </div>
 
     <footer class="footer">
         <p>&copy; 2024 - Projeto da Turma 3A</p>
