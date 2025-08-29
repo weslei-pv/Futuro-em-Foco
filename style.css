@@ -143,7 +143,7 @@ h2 {
     max-width: 800px;
     height: 200px;
     padding: 1rem;
-    border: 1px solid #ced4da;
+    border: 1px solid #bebebe;
     border-radius: 8px;
     font-family: inherit;
     font-size: 1rem;
@@ -162,7 +162,7 @@ h2 {
 }
 
 #save-plan-btn:hover {
-    background-color: #0056b3;
+    background-color: #051750;
 }
 
 .hidden {
