@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Futuro em Foco: Planejamento de Carreira 3A</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -16,37 +16,41 @@
     <div class="content-container">
         <aside class="sidebar-nav">
             <ul class="nav-list">
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#colegas">Nossos Planos</a></li>
-                <li><a href="#planejamento">Meu Plano</a></li>
+                <li><a href="#inicio"><i class="fas fa-home"></i> Início</a></li>
+                <li><a href="#colegas"><i class="fas fa-users"></i> Nossos Planos</a></li>
+                <li><a href="#planejamento"><i class="fas fa-file-alt"></i> Meu Plano</a></li>
             </ul>
         </aside>
 
         <main class="main-content">
             <section id="inicio" class="intro-section">
-                <h2>Bem-vindos, 3A!</h2>
+                <h2><i class="fas fa-rocket"></i> Bem-vindos, 3A!</h2>
                 <p>Este é o nosso espaço para explorar e planejar o futuro. Descubra as profissões que seus colegas escolheram e comece a traçar o seu caminho profissional.</p>
+                <p>Use esta ferramenta para refletir sobre suas aspirações, compartilhar seus objetivos e se inspirar nas escolhas dos seus colegas. O futuro começa hoje!</p>
             </section>
 
             <section id="colegas" class="colleagues-section">
-                <h2>Nossos Planos de Carreira</h2>
+                <h2><i class="fas fa-graduation-cap"></i> Nossos Planos de Carreira</h2>
+                <p>Conheça as escolhas profissionais dos seus colegas e inspire-se para traçar o seu próprio caminho.</p>
                 <div class="colleagues-grid">
-                    </div>
+                    <!-- Conteúdo dinâmico será inserido via JavaScript -->
+                </div>
             </section>
 
             <section id="planejamento" class="plan-section">
-                <h2>Meu Plano de Carreira</h2>
+                <h2><i class="fas fa-star"></i> Meu Plano de Carreira</h2>
+                <p>Reflita sobre sua carreira dos sonhos e planeje os passos para alcançá-la. Suas informações serão salvas localmente no navegador.</p>
                 <div class="planning-area">
-                    <textarea id="my-plan-text" placeholder="Escreva aqui sobre a sua profissão dos sonhos, por que você a escolheu, os passos para chegar lá e suas metas."></textarea>
-                    <button id="save-plan-btn">Salvar Meu Plano</button>
-                    <div id="saved-plan-message" class="hidden">Plano salvo com sucesso!</div>
+                    <textarea id="my-plan-text" placeholder="Escreva aqui sobre a sua profissão dos sonhos, por que você a escolheu, os passos para chegar lá e suas metas..."></textarea>
+                    <button id="save-plan-btn" class="glow-effect"><i class="fas fa-save"></i> Salvar Meu Plano</button>
+                    <div id="saved-plan-message" class="hidden"><i class="fas fa-check-circle"></i> Plano salvo com sucesso!</div>
                 </div>
             </section>
         </main>
     </div>
 
     <footer class="footer">
-        <p>&copy; 2024 - Projeto da Turma 3A</p>
+        <p>&copy; 2024 - Projeto da Turma 3A | Futuro em Foco</p>
     </footer>
 
     <script src="script.js"></script>

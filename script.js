@@ -1,71 +1,76 @@
-// Array com os nomes e as profissões que seus colegas querem seguir
-const colegas = [
-    { nome: "SUYANE", profissao: "Enfermeira" },
-    { nome: "VINICIOS", profissao: "Engenheiro Civil" },
-    { nome: "MATHEUS", profissao: "Eletricista" },
-    { nome: "SHIRLLEY", profissao: "Psicóloga" },
-    { nome: "AMANDA", profissao: "Jornalista" },
-    { nome: "LARISSA", profissao: "Chef de Cozinha" },
-    { nome: "MIGUEL", profissao: "Programador" },
-    { nome: "THALISON", profissao: "Jogador de Futebol Profissional" },
-    { nome: "ANIELY", profissao: "Médica" },
-    { nome: "KELLY", profissao: "Fisioterapeuta" },
-    { nome: "SISSA", profissao: "Veterinária" },
-    { nome: "MAURICIO", profissao: "Cientista de Dados" },
-    { nome: "MURILO", profissao: "Arquiteto" },
-    { nome: "VANESSA", profissao: "Advogada" }
-    // Adicione mais colegas aqui, seguindo o mesmo padrão
-];
+document.addEventListener('DOMContentLoaded', function() {
+    // Dados de exemplo para os planos dos colegas
+    const colleaguesData = [
+        { name: "Ana Silva", profession: "Médica", description: "Quero me especializar em pediatria e trabalhar em hospitais infantis." },
+        { name: "Bruno Oliveira", profession: "Engenheiro de Software", description: "Planejo trabalhar em uma grande empresa de tecnologia e desenvolver aplicativos inovadores." },
+        { name: "Carla Santos", profession: "Arquiteta", description: "Sonho em projetar edifícios sustentáveis e funcionalmente belos." },
+        { name: "Daniel Costa", profession: "Professor de História", description: "Quero lecionar no ensino médio e inspirar jovens a amar a história." },
+        { name: "Eduarda Pereira", profession: "Psicóloga", description: "Planejo me especializar em terapia cognitivo-comportamental e abrir meu próprio consultório." },
+        { name: "Felipe Rodrigues", profession: "Empreendedor", description: "Quero criar minha própria startup na área de tecnologia educacional." },
+        { name: "Gabriela Almeida", profession: "Advogada", description: "Almejo trabalhar com direitos humanos e defender causas importantes para a sociedade." },
+        { name: "Hugo Carvalho", profession: "Cientista de Dados", description: "Pretendo analisar grandes volumes de dados para solucionar problemas complexos." }
+    ];
 
-document.addEventListener('DOMContentLoaded', () => {
-    const grid = document.querySelector('.colleagues-grid');
-    const saveBtn = document.getElementById('save-plan-btn');
+    // Preencher a grade de colegas
+    const colleaguesGrid = document.querySelector('.colleagues-grid');
+    
+    colleaguesData.forEach(colleague => {
+        const card = document.createElement('div');
+        card.className = 'colleague-card glow-effect';
+        card.innerHTML = `
+            <h3 class="colleague-name">${colleague.name}</h3>
+            <p class="colleague-profession"><i class="fas fa-briefcase"></i> ${colleague.profession}</p>
+            <p class="colleague-description">${colleague.description}</p>
+        `;
+        colleaguesGrid.appendChild(card);
+    });
+
+    // Gerenciar o plano salvo do usuário
     const planTextarea = document.getElementById('my-plan-text');
-    const message = document.getElementById('saved-plan-message');
+    const saveButton = document.getElementById('save-plan-btn');
+    const savedMessage = document.getElementById('saved-plan-message');
 
-    // Função para renderizar os cards dos colegas
-    function renderColleagues() {
-        colegas.forEach(colega => {
-            const card = document.createElement('div');
-            card.classList.add('colleague-card');
-            
-            // Converte o nome para o formato do arquivo da imagem (minúsculas)
-            const imgName = colega.nome.toLowerCase();
-            
-            card.innerHTML = `
-                <img src="./images/${imgName}.jpg" alt="Foto de ${colega.nome}">
-                <h3>${colega.nome}</h3>
-                <p>${colega.profissao}</p>
-            `;
-            grid.appendChild(card);
-        });
+    // Carregar plano salvo se existir
+    const savedPlan = localStorage.getItem('careerPlan');
+    if (savedPlan) {
+        planTextarea.value = savedPlan;
     }
 
-    // Função para salvar o plano
-    function savePlan() {
-        const userPlan = planTextarea.value;
-        if (userPlan.trim() !== "") {
-            localStorage.setItem('meuPlano', userPlan);
-            message.textContent = "Plano salvo com sucesso!";
-            message.classList.remove('hidden');
+    // Salvar plano quando o botão for clicado
+    saveButton.addEventListener('click', function() {
+        const planText = planTextarea.value.trim();
+        if (planText) {
+            localStorage.setItem('careerPlan', planText);
+            
+            // Mostrar mensagem de sucesso
+            savedMessage.classList.remove('hidden');
+            
+            // Efeito visual no botão
+            saveButton.innerHTML = '<i class="fas fa-check"></i> Salvo!';
+            saveButton.style.background = 'linear-gradient(135deg, var(--success), #00c853)';
+            
+            // Restaurar o botão após 2 segundos
             setTimeout(() => {
-                message.classList.add('hidden');
-            }, 3000);
-        } else {
-            alert("Por favor, escreva algo no seu plano antes de salvar.");
+                savedMessage.classList.add('hidden');
+                saveButton.innerHTML = '<i class="fas fa-save"></i> Salvar Meu Plano';
+                saveButton.style.background = 'var(--gradient)';
+            }, 2000);
         }
-    }
+    });
 
-    // Função para carregar o plano salvo (se existir)
-    function loadPlan() {
-        const savedPlan = localStorage.getItem('meuPlano');
-        if (savedPlan) {
-            planTextarea.value = savedPlan;
-        }
-    }
-
-    saveBtn.addEventListener('click', savePlan);
-
-    renderColleagues();
-    loadPlan();
+    // Rolagem suave para links âncora
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 20,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
 });
