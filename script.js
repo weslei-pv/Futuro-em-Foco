@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Dados de exemplo para os planos dos colegas
     const colleaguesData = [
-        { name: "Ana Silva", profession: "Médica", description: "Quero me especializar em pediatria e trabalhar em hospitais infantis." },
-        { name: "Bruno Oliveira", profession: "Engenheiro de Software", description: "Planejo trabalhar em uma grande empresa de tecnologia e desenvolver aplicativos inovadores." },
+        { name: "VINICIUS", profession: "Agronomia", description: "Quero me especializar em pediatria e trabalhar em hospitais infantis." },
+        { name: "KELLY", profession: "Engenheiro de Software", description: "Planejo trabalhar em uma grande empresa de tecnologia e desenvolver aplicativos inovadores." },
         { name: "Carla Santos", profession: "Arquiteta", description: "Sonho em projetar edifícios sustentáveis e funcionalmente belos." },
         { name: "Daniel Costa", profession: "Professor de História", description: "Quero lecionar no ensino médio e inspirar jovens a amar a história." },
         { name: "Eduarda Pereira", profession: "Psicóloga", description: "Planejo me especializar em terapia cognitivo-comportamental e abrir meu próprio consultório." },
