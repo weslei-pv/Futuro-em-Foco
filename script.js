@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
         { name: "VANESSA", profession: "Psicologia no Paraná", description: "O curso de Psicologia forma profissionais capazes de analisar e interpretar sentimentos, emoções e comportamentos humanos. Com duração média de 5 anos, o currículo combina disciplinas teóricas e práticas, preparando os estudantes para atuar em diversas áreas como clínica, organizacional, educacional, social e hospitalar." }
         { name: "SHIRLLEY", profession: "Magistratura", description: "Descubra o caminho completo para se tornar magistrado: desde a graduação até a aprovação no concurso. Seu guia definitivo para uma carreira de prestígio na justiça brasileira." } 
         { name: "LARISSA", profession: "Fisioterapia", description: "A fisioterapia é uma ciência da saúde que estuda, previne e trata os distúrbios cinéticos funcionais intercorrentes em órgãos e sistemas do corpo humano. Seu objetivo é preservar, desenvolver ou restaurar a integridade de órgãos, sistemas ou funções, utilizando para isso o movimento como principal recurso terapêutico." }
-
     ];
 
     // Preencher a grade de colegas
