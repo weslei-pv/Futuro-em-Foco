@@ -1,14 +1,21 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Dados de exemplo para os planos dos colegas
     const colleaguesData = [
-        { name: "VINICIUS", profession: "Agronomia", description: "Quero me especializar em pediatria e trabalhar em hospitais infantis." },
-        { name: "KELLY", profession: "Engenheiro de Software", description: "Planejo trabalhar em uma grande empresa de tecnologia e desenvolver aplicativos inovadores." },
-        { name: "Carla Santos", profession: "Arquiteta", description: "Sonho em projetar edifícios sustentáveis e funcionalmente belos." },
-        { name: "Daniel Costa", profession: "Professor de História", description: "Quero lecionar no ensino médio e inspirar jovens a amar a história." },
-        { name: "Eduarda Pereira", profession: "Psicóloga", description: "Planejo me especializar em terapia cognitivo-comportamental e abrir meu próprio consultório." },
-        { name: "Felipe Rodrigues", profession: "Empreendedor", description: "Quero criar minha própria startup na área de tecnologia educacional." },
-        { name: "Gabriela Almeida", profession: "Advogada", description: "Almejo trabalhar com direitos humanos e defender causas importantes para a sociedade." },
-        { name: "Hugo Carvalho", profession: "Cientista de Dados", description: "Pretendo analisar grandes volumes de dados para solucionar problemas complexos." }
+        { name: "VINICIUS", profession: "Agronomia", description: "Descubra tudo sobre uma das profissões mais importantes para o futuro da humanidade. Da produção de alimentos à preservação ambiental, o engenheiro agrônomo é peça fundamental no desenvolvimento sustentável." },
+        { name: "KELLY", profession: "Fotografia", description: "Transformo suas memórias mais preciosas em arte visual que durará para sempre" },
+        { name: "AMANDA ", profession: "Nutrição & Saúde", description: "O curso de Nutrição forma o profissional de saúde responsável por promover e recuperar a saúde através da alimentação. O currículo abrange Bioquímica, Ciência dos Alimentos e a aplicação clínica de dietas (Dietoterapia). O futuro nutricionista aprende a realizar a avaliação nutricional e a criar planos alimentares personalizados. Com isso, pode atuar em clínicas, hospitais, na saúde pública ou em empresas, sendo essencial para orientar as pessoas rumo a um estilo de vida mais saudável e equilibrado." },
+        { name: "MIGUEL ", profession: "", description: "" },
+        { name: "SUYANE ", profession: "Engenharia Mecânica", description: "Engenharia Mecânica é um dos cursos mais tradicionais e abrangentes da área de engenharia. Ele forma profissionais capazes de conceber, projetar, analisar, fabricar e manter sistemas mecânicos dos mais simples aos mais complexos." },
+        { name: "THALISON", profession: "como se tornar um jogador de vôlei proficional", description: "O voleibol é um dos esportes mais populares do Brasil, país reconhecido mundialmente por sua excelência nessa modalidade. Tornar-se um jogador profissional de vôlei é o sonho de muitos jovens atletas, mas o caminho é desafiador e requer dedicação, talento e perseverança." },
+        { name: "ANIELY", profession: "Polícia Rodoviária Federal", description: "A segurança viária, o combate ao crime e a tecnologia são os pilares que sustentam a atuação da PRF em todo o país. O trabalho vai muito além da fiscalização: é um serviço dedicado à proteção e à garantia da vida nas estradas." },
+        { name: "SISSA ", profession: "", description: "" }
+        { name: "MATHEUS", profession: "Psicologia", description: "Para se tornar psicólogo no Brasil, o primeiro passo é a graduação, que dura em média cinco anos. Durante o curso, você vai explorar diversas áreas do comportamento humano, incluindo teorias como Psicanálise e Terapia Cognitivo-Comportamental, além de realizar estágios em hospitais, escolas e empresas. Para atuar profissionalmente, é necessário registrar-se no Conselho Regional de Psicologia (CRP), garantindo que os serviços prestados sigam padrões éticos e de qualidade. A formação contínua, com especializações, também é fundamental para se destacar no mercado de trabalho." }
+        { name: "MAURICIO", profession: "", description: "" }
+        { name: "MURILO ", profession: "", description: "" }
+        { name: "VANESSA", profession: "Psicologia no Paraná", description: "O curso de Psicologia forma profissionais capazes de analisar e interpretar sentimentos, emoções e comportamentos humanos. Com duração média de 5 anos, o currículo combina disciplinas teóricas e práticas, preparando os estudantes para atuar em diversas áreas como clínica, organizacional, educacional, social e hospitalar." }
+        { name: "SHIRLLEY", profession: "Magistratura", description: "Descubra o caminho completo para se tornar magistrado: desde a graduação até a aprovação no concurso. Seu guia definitivo para uma carreira de prestígio na justiça brasileira." } 
+        { name: "LARISSA", profession: "Fisioterapia", description: "A fisioterapia é uma ciência da saúde que estuda, previne e trata os distúrbios cinéticos funcionais intercorrentes em órgãos e sistemas do corpo humano. Seu objetivo é preservar, desenvolver ou restaurar a integridade de órgãos, sistemas ou funções, utilizando para isso o movimento como principal recurso terapêutico." }
+
     ];
 
     // Preencher a grade de colegas
