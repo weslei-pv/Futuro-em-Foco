@@ -1,7 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Dados de exemplo para os planos dos colegas
     const colleaguesData = [
-        { name: "VINICIUS", profession: "Agronomia", description: "Descubra tudo sobre uma das profissões mais importantes para o futuro da humanidade. Da produção de alimentos à preservação ambiental, o engenheiro agrônomo é peça fundamental no desenvolvimento sustentável." },
+        { 
+            name: "VINICIUS", 
+            profession: "Agronomia", 
+            description: "Descubra tudo sobre uma das profissões mais importantes para o futuro da humanidade. Da produção de alimentos à preservação ambiental, o engenheiro agrônomo é peça fundamental no desenvolvimento sustentável.",
+            professionLink: "https://seusite.com/vinicius" // Adicione o link do site do Vinícius aqui
+        },
         { name: "KELLY", profession: "Fotografia", description: "Transformo suas memórias mais preciosas em arte visual que durará para sempre" },
         { name: "AMANDA ", profession: "Nutrição & Saúde", description: "O curso de Nutrição forma o profissional de saúde responsável por promover e recuperar a saúde através da alimentação. O currículo abrange Bioquímica, Ciência dos Alimentos e a aplicação clínica de dietas (Dietoterapia). O futuro nutricionista aprende a realizar a avaliação nutricional e a criar planos alimentares personalizados. Com isso, pode atuar em clínicas, hospitais, na saúde pública ou em empresas, sendo essencial para orientar as pessoas rumo a um estilo de vida mais saudável e equilibrado." },
         { name: "MIGUEL ", profession: "", description: "" },
@@ -23,9 +28,18 @@ document.addEventListener('DOMContentLoaded', function() {
     colleaguesData.forEach(colleague => {
         const card = document.createElement('div');
         card.className = 'colleague-card glow-effect';
+        
+        // Verifica se tem link para a profissão
+        const professionHTML = colleague.professionLink 
+            ? `<p class="colleague-profession clickable-profession">
+                   <i class="fas fa-briefcase"></i> 
+                   <a href="${colleague.professionLink}" target="_blank" class="profession-link">${colleague.profession}</a>
+               </p>`
+            : `<p class="colleague-profession"><i class="fas fa-briefcase"></i> ${colleague.profession}</p>`;
+        
         card.innerHTML = `
             <h3 class="colleague-name">${colleague.name}</h3>
-            <p class="colleague-profession"><i class="fas fa-briefcase"></i> ${colleague.profession}</p>
+            ${professionHTML}
             <p class="colleague-description">${colleague.description}</p>
         `;
         colleaguesGrid.appendChild(card);

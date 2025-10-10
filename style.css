@@ -376,3 +376,32 @@ section {
 .glow-effect:hover::after {
     opacity: 1;
 }
+
+
+
+
+
+/* esse é o Babulho para deixar os botoes bunito */
+.clickable-profession {
+    margin-bottom: 10px;
+}
+
+.profession-link {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+.profession-link:hover {
+    color: var(--accent);
+    border-bottom: 2px solid var(--accent);
+    background: rgba(74, 144, 226, 0.1);
+}
+
+.colleague-card:hover .profession-link {
+    transform: translateY(-1px);
+}
