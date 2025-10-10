@@ -5,9 +5,13 @@ document.addEventListener('DOMContentLoaded', function() {
             name: "VINICIUS", 
             profession: "Agronomia", 
             description: "Descubra tudo sobre uma das profissões mais importantes para o futuro da humanidade. Da produção de alimentos à preservação ambiental, o engenheiro agrônomo é peça fundamental no desenvolvimento sustentável.",
-            professionLink: "https://seusite.com/vinicius" // Adicione o link do site do Vinícius aqui
+            professionLink: "https://profissao-three.vercel.app/" 
         },
-        { name: "KELLY", profession: "Fotografia", description: "Transformo suas memórias mais preciosas em arte visual que durará para sempre" },
+        { name: "KELLY", profession: "Fotografia", description: "Transformo suas memórias mais preciosas em arte visual que durará para sempre" 
+
+
+
+        },
         { name: "AMANDA ", profession: "Nutrição & Saúde", description: "O curso de Nutrição forma o profissional de saúde responsável por promover e recuperar a saúde através da alimentação. O currículo abrange Bioquímica, Ciência dos Alimentos e a aplicação clínica de dietas (Dietoterapia). O futuro nutricionista aprende a realizar a avaliação nutricional e a criar planos alimentares personalizados. Com isso, pode atuar em clínicas, hospitais, na saúde pública ou em empresas, sendo essencial para orientar as pessoas rumo a um estilo de vida mais saudável e equilibrado." },
         { name: "MIGUEL ", profession: "", description: "" },
         { name: "SUYANE ", profession: "Engenharia Mecânica", description: "Engenharia Mecânica é um dos cursos mais tradicionais e abrangentes da área de engenharia. Ele forma profissionais capazes de conceber, projetar, analisar, fabricar e manter sistemas mecânicos dos mais simples aos mais complexos." },
