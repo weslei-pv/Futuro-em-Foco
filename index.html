@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,7 +34,7 @@
             line-height: 1.6;
             color: var(--text-primary);
             background-color: var(--dark-bg);
-            background-image: 
+            background-image:
                 radial-gradient(circle at 15% 50%, rgba(126, 87, 194, 0.1) 0%, transparent 25%),
                 radial-gradient(circle at 85% 30%, rgba(255, 64, 129, 0.1) 0%, transparent 25%),
                 radial-gradient(circle at 50% 80%, rgba(24, 255, 255, 0.1) 0%, transparent 25%);
@@ -107,7 +108,8 @@
             border-left: 4px solid transparent;
         }
 
-        .nav-list a:hover, .nav-list a:focus {
+        .nav-list a:hover,
+        .nav-list a:focus {
             color: var(--text-primary);
             background: rgba(126, 87, 194, 0.1);
             border-left-color: var(--accent-primary);
@@ -351,8 +353,15 @@
 
         /* Animações */
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         section {
@@ -424,7 +433,8 @@
                 <li><a href="#inicio"><i class="fas fa-home"></i> Início</a></li>
                 <li><a href="#colegas"><i class="fas fa-users"></i> Nossos Planos</a></li>
                 <li><a href="#planejamento"><i class="fas fa-file-alt"></i> Meu Plano</a></li>
-               <li><a href="https://profissao-three.vercel.app/" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-alt"></i> VINI</a></li>
+                <li><a href="https://profissao-three.vercel.app/" target="_blank" rel="noopener noreferrer"><i
+                            class="fas fa-file-alt"></i> VINI</a></li>
             </ul>
         </aside>
 
@@ -445,14 +455,7 @@
                     <!-- VINICIUS -->
                     <div class="colleague-card glow-effect">
                         <h3 class="colleague-name">VINICIUS</h3>
-                        <div class="colleague-profession clickable-profession">
-                            <i class="fas fa-briefcase"></i>
-
-                            <!-- Opção 1: Apenas o link principal -->
-                            <a href="https://profissao-three.vercel.app/" target="_blank" class="profession-link">
-                                <i class="fas fa-home"></i> Agronomia
-                            </a>
-                        </div>
+                        <p class="colleague-profession"><i class="fas fa-briefcase"></i> Agronomia</p>
                         <p class="colleague-description">Descubra tudo sobre uma das profissões mais importantes para o
                             futuro da humanidade. Da produção de alimentos à preservação ambiental, o engenheiro
                             agrônomo é peça fundamental no desenvolvimento sustentável.</p>
@@ -600,7 +603,7 @@
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Gerenciar o plano salvo do usuário
             const planTextarea = document.getElementById('my-plan-text');
             const saveButton = document.getElementById('save-plan-btn');
@@ -613,18 +616,18 @@
             }
 
             // Salvar plano quando o botão for clicado
-            saveButton.addEventListener('click', function() {
+            saveButton.addEventListener('click', function () {
                 const planText = planTextarea.value.trim();
                 if (planText) {
                     localStorage.setItem('careerPlan', planText);
-                    
+
                     // Mostrar mensagem de sucesso
                     savedMessage.classList.remove('hidden');
-                    
+
                     // Efeito visual no botão
                     saveButton.innerHTML = '<i class="fas fa-check"></i> Salvo!';
                     saveButton.style.background = 'linear-gradient(135deg, var(--success), #00c853)';
-                    
+
                     // Restaurar o botão após 2 segundos
                     setTimeout(() => {
                         savedMessage.classList.add('hidden');
@@ -636,13 +639,13 @@
 
             // Rolagem suave para links âncora - CORRIGIDO
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
+                anchor.addEventListener('click', function (e) {
                     const href = this.getAttribute('href');
-                    
+
                     // Verifica se é um link âncora válido
                     if (href && href !== '#') {
                         const targetElement = document.querySelector(href);
-                        
+
                         if (targetElement) {
                             e.preventDefault();
                             window.scrollTo({
@@ -656,4 +659,5 @@
         });
     </script>
 </body>
+
 </html>
